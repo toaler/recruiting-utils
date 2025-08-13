@@ -180,7 +180,4 @@ If you need help customizing this template or have questions about email recruit
 ---
 
 **Note**: This template is designed as a starting point. Customize it to reflect your unique personality, achievements, and goals while maintaining professionalism.
-||||||| empty tree
-=======
-# recruiting-utils
->>>>>>> 45108033ae3aca3d07d7b6515942bb7addedca76
+
