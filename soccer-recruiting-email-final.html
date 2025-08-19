@@ -13,14 +13,24 @@
         </xml>
     </noscript>
     <![endif]-->
+    <!--[if !mso]><!-- -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<![endif]-->
+    <!--[if mso]>
+    <style type="text/css">
+    body, table, td {font-family: Georgia, 'Times New Roman', serif !important;}
+    </style>
+    <![endif]-->
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: Georgia, serif;
+            font-family: Georgia, 'Times New Roman', serif;
             line-height: 1.6;
             color: #333;
             background-color: #f4f4f4;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
         }
         
         table {
@@ -41,10 +51,12 @@
             outline: none;
             text-decoration: none;
             -ms-interpolation-mode: bicubic;
+            max-width: 100%;
         }
         
         .email-container {
-            width: 800px;
+            max-width: 800px;
+            width: 100%;
             margin: 0 auto;
             background-color: #ffffff;
         }
@@ -80,13 +92,13 @@
             background-color: #2c3e50;
             color: white;
             padding: 35px 25px;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
         
         .main-content {
             background-color: #ffffff;
             padding: 35px;
-            font-family: Georgia, serif;
+            font-family: Georgia, 'Times New Roman', serif;
         }
         
         .sidebar-title {
@@ -196,16 +208,19 @@
         @media only screen and (max-width: 768px) {
             .email-container {
                 width: 100% !important;
+                max-width: 100% !important;
             }
             
             .sidebar {
                 width: 100% !important;
                 display: block !important;
+                padding: 25px 20px !important;
             }
             
             .main-content {
                 width: 100% !important;
                 display: block !important;
+                padding: 25px 20px !important;
             }
             
             .header {
@@ -220,7 +235,59 @@
                 width: 100px !important;
                 height: 100px !important;
             }
+            
+            .sidebar-title {
+                font-size: 16px !important;
+            }
+            
+            .main-section-title {
+                font-size: 20px !important;
+            }
         }
+        
+        /* Small mobile devices */
+        @media only screen and (max-width: 480px) {
+            .header {
+                padding: 15px !important;
+            }
+            
+            .header h1 {
+                font-size: 20px !important;
+            }
+            
+            .tagline {
+                font-size: 14px !important;
+            }
+            
+            .headshot {
+                width: 80px !important;
+                height: 80px !important;
+            }
+            
+            .sidebar, .main-content {
+                padding: 20px 15px !important;
+            }
+            
+            .sidebar-title {
+                font-size: 15px !important;
+            }
+            
+            .main-section-title {
+                font-size: 18px !important;
+            }
+        }
+        
+        /* Email client specific fixes */
+        .sidebar-table, .main-table {
+            display: inline-block;
+        }
+        
+        /* Force table display for Outlook */
+        /*[if mso]*/
+        .sidebar-table, .main-table {
+            display: table !important;
+        }
+        /*[endif]*/
     </style>
 </head>
 <body>
@@ -239,8 +306,8 @@
                         <td class="header">
                             <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                 <tr>
-                                    <td width="107" valign="top">
-                                        <img src="https://raw.githubusercontent.com/toaler/recruiting-utils/main/images/ellis-headshot-school.jpg" alt="Ellis Toal Headshot" class="headshot">
+                                    <td width="107" valign="top" style="width: 107px;">
+                                        <img src="https://raw.githubusercontent.com/toaler/recruiting-utils/main/images/ellis-headshot-school.jpg" alt="Ellis Toal Headshot" class="headshot" style="display: block; width: 107px; height: 107px;">
                                     </td>
                                     <td valign="top" style="padding-left: 20px;">
                                         <div class="header-content">
@@ -262,7 +329,7 @@
                             <td width="280" valign="top">
                             <![endif]-->
                             
-                            <table cellpadding="0" cellspacing="0" border="0" width="280" style="float: left; display: inline-block;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="280" style="float: left; display: inline-block; max-width: 280px; width: 100%;" class="sidebar-table">
                                 <tr>
                                     <td class="sidebar">
                                         <!-- Contact Information -->
@@ -382,7 +449,7 @@
                             <td width="520" valign="top">
                             <![endif]-->
                             
-                            <table cellpadding="0" cellspacing="0" border="0" width="520" style="float: left; display: inline-block;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="520" style="float: left; display: inline-block; max-width: 520px; width: 100%;" class="main-table">
                                 <tr>
                                     <td class="main-content">
                                         <!-- Recent Updates -->
